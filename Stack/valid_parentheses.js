@@ -13,16 +13,19 @@ function isValid(string) {
     for (i in string) {
         if (string[i] == "(") {
             bracketCount++;
+            if (curlyBracketCount > 0 || squareBracketCount > 0) {return false}
         } else if (string[i] == ")") {
             bracketCount--;
         }
         if (string[i] == "{") {
             curlyBracketCount++;
+            if (bracketCount > 0 || squareBracketCount > 0) {return false}
         } else if (string[i] == "}") {
             curlyBracketCount--;
         }
         if (string[i] == "[") {
             squareBracketCount++;
+            if (bracketCount > 0 || curlyBracketCount > 0) {return false}
         } else if (string[i] == "]") {
             squareBracketCount--;
         }
@@ -41,3 +44,5 @@ function isValid(string) {
 console.log(isValid("()")) //expect true
 console.log(isValid("()[]{}")) //expect true
 console.log(isValid("(]")) //expect false
+console.log(isValid("([)]")) //expect false
+console.log(isValid("{[]}")) //expect true
