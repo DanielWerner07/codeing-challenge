@@ -18,24 +18,14 @@
 // 3. 2 steps + 1 step
 
 function climbStairs(stairs) {
-    maxStairs = stairs;
-    let waysToClimb = 0;
-    for (let i = 0; i < stairs; i++) {
-        oneStep = i + 1;
-        twoStep = i + 2;
-        if (oneStep == stairs) {
-            waysToClimb++;
-        } else if (oneStep < stairs) {
-            climbStairs(maxStairs - 1);
-        }
-        if (twoStep == stairs) {
-            waysToClimb++;
-        } else if (twoStep < stairs) {
-            console.log("test");
-            climbStairs(maxStairs - 2);
-        }
+    let oneStep = 1;
+    let twoStep = 1;
+    for(let i = 2; i <= stairs; i++) {
+        const temp = twoStep;
+        twoStep = twoStep + oneStep;
+        oneStep = temp;
     }
-    return waysToClimb;
+    return twoStep;
 }
 
 console.log(climbStairs(2)); //expect 2
