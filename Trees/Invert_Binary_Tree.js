@@ -19,22 +19,21 @@
 function invertTree (root) {
     let Incress = 2
     let newRoot = [];
-    let y = 0;
+    let y = Incress;
     let t = 1;
     newRoot[0] = root[0];
+    let u = 0;
     for (let i = 1; i < root.length;) {
-        y = (Incress);
+        u = y;
         for (let e = 1; e < (Incress + 1); e++) {
-            console.log(Incress);
-            newRoot[t] = root[y];
-            y--;
+            newRoot[t] = root[u];
+            u--;
             t++;
         }
-        console.log("--------------")
         i += Incress;
         Incress *= 2;
+        y += Incress;
     }
-    console.log(root);
     return newRoot;
 };
 
@@ -42,5 +41,5 @@ root1 = [4,2,7,1,3,6,9];
 root2 = [2,1,3];
 root3 = [];
 console.log(invertTree(root1)); // should be [4,7,2,9,6,3,1]
-// console.log(invertTree(root2)); // should be [2,3,1]
-// console.log(invertTree(root3)); // should be []
+console.log(invertTree(root2)); // should be [2,3,1]
+console.log(invertTree(root3)); // should be []
