@@ -5,11 +5,11 @@
 
 function productOfIndex(array) {
     let newArray = [];
-    let newInt = 0;
     for (let i = 0; i < array.length; i++) {
+        let newInt = array[i];
         for (let e = 0; e <array.length; e++) {
             if (i != e) {
-                newInt = (array[i] * array[e]);
+                newInt = (newInt * )
                 newArray.push(newInt);
             }
         }
