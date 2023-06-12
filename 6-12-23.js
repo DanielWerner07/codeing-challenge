@@ -24,4 +24,4 @@ console.log(lowestPostiveIntiger(array1));
 
 array2 = [1, 2, 0];
 console.log(lowestPostiveIntiger(array2));
-//should be 3
+// should be 3
