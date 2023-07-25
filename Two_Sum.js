@@ -16,5 +16,19 @@
 // Output: [0,1]
 
 function twoSum(nums, target) {
-    for ()
+    let answer = [];
+    for (let i = 0; i < nums.length; i++) {
+        for (let e = (i + 1); e < nums.length; e++) {
+            if ((nums[i] + nums[e]) == target) {
+                answer.push(i);
+                answer.push(e);
+                return answer;
+            }
+        }
+    }
+    return ("no answer found");
 };
+
+nums1 = [2,7,11,15];
+target1 = 9;
+console.log(twoSum(nums1, target1));
