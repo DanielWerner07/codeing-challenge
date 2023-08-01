@@ -16,11 +16,13 @@
 // Output: [8,9,9,9,0,0,0,1]
 
 function addTwoNumbers (l1, l2) {
-    reversed1 = l1.reverse;
-    reversed2 = l2.reverse;
-    console.log(l1,l2);
+    reversed1 = l1.reverse();
+    reversed2 = l2.reverse();
+    string1 = parseInt(reversed1.join(''), 10);
+    string2 = parseInt(reversed2.join(''), 10)
+    return (string1 + string2);
 };
 
 a1 = [2,4,3];
 a2 = [5,6,4];
-addTwoNumbers(a1, a2);
+console.log(addTwoNumbers(a1, a2));
