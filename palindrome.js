@@ -16,5 +16,14 @@
 // Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 function palindrome(int) {
-    
+    let str = int.toString();
+    let reverse = str.reverse();
+    if (str == reverse) {
+        return true
+    }   else {
+        return false
+    }
 }
+
+example1 = 121;
+console.log(palindrome(example1));
