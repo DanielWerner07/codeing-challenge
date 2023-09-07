@@ -17,8 +17,8 @@
 
 function palindrome(int) {
     let str = int.toString();
-    let reverse = str.reverse();
-    if (str == reverse) {
+    let reverseStr = str.split("").reverse().join("");
+    if (str == reverseStr) {
         return true
     }   else {
         return false
@@ -27,3 +27,9 @@ function palindrome(int) {
 
 example1 = 121;
 console.log(palindrome(example1));
+
+example2 = -121;
+console.log(palindrome(example2));
+
+example3 = 10;
+console.log(palindrome(example3));
