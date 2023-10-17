@@ -35,6 +35,15 @@
 // Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 
-function romanToInt() {
+function romanToInt(s) {
     
+    let I = 1;
+    let V = 5;
+    let X = 10;
+    let L = 50;
+    let C = 100;
+    let D = 500;
+    let M = 1000;
+
+
 }
