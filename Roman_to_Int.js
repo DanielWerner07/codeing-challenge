@@ -36,7 +36,7 @@
 
 
 function romanToInt(s) {
-    
+
     let I = 1;
     let V = 5;
     let X = 10;
@@ -44,6 +44,10 @@ function romanToInt(s) {
     let C = 100;
     let D = 500;
     let M = 1000;
+    let num = 0;
 
+    for (let i = 0; i < s.length; i++) {
 
+    }
+    
 }
