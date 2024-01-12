@@ -12,6 +12,25 @@
 
 
 
-function longestCommonPrefix() {
+function longestCommonPrefix(strings) {
+    if (strings.length === 0) {
+        return "";
+    }
 
+    strings.sort();
+    const firstStr = strings[0];
+    const lastStr = strings[strings.length - 1];
+    let commonPrefix = "";
+    for (let i = 0; i < firstStr.length; i++) {
+        if (firstStr.charAt(i) === lastStr.charAt(i)) {
+            commonPrefix += firstStr.charAt(i);
+        } else {
+            break;
+        }
+    }
+
+    return commonPrefix;
 }
+
+str1 = ["flower","flow","flight"]
+console.log(longestCommonPrefix(str1));
