@@ -31,7 +31,6 @@ class TreeNode {
         throw new Error("Invalid operator");
     }
   }
-  
   // Example usage:
   const root = new TreeNode('*');
   root.left = new TreeNode('+');
