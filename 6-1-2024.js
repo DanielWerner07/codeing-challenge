@@ -54,3 +54,24 @@ function countSmaller(nums) {
 const input = [3, 4, 9, 6, 1];
 const result = countSmaller(input);
 console.log(result);  // Output: [1, 1, 2, 1, 0]
+
+// Explanation:
+
+//     Initial Setup:
+//         Create an array counts initialized with zeros to store the result.
+//         Create an array indices to keep track of the original indices of the elements.
+
+//     Merge Sort:
+//         Define a mergeSort function that sorts the array while counting the smaller elements to the right.
+//         Recursively split the array into two halves until each half contains one element.
+
+//     Merge Process:
+//         During the merge process, compare elements from the left and right halves.
+//         If an element in the left half is greater than an element in the right half, it means that this element has all the remaining elements in the right half as smaller elements to its right.
+//         Update the counts array accordingly.
+//         Merge the two halves while maintaining the original indices.
+
+//     Return Result:
+//         After the merge sort completes, the counts array contains the desired counts of smaller elements to the right for each element in the input array.
+
+// This approach effectively leverages the divide-and-conquer strategy of Merge Sort to achieve an O(n log n) time complexity, making it efficient for larger input arrays.
