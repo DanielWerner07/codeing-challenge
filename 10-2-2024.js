@@ -14,14 +14,14 @@
 
 function Kaprekar(n) {
     let loops = 0;
-    let newNum = n.toString().split('');
-    ascNum = newNum.sort((a, b) => a - b).join('');
-    desNum = newNum.sort((a, b) => b - a).join('');
-    let finalNum = Math.max(ascNum, desNum) - Math.min(ascNum, desNum);
-    if (finalNum == 6174) {
-
+    while (n != 6174) {
+        loops++;
+        n = n.toString().split('');
+        ascNum = n.sort((a, b) => a - b).join('');
+        desNum = n.sort((a, b) => b - a).join('');
+        n = Math.max(ascNum, desNum) - Math.min(ascNum, desNum);
     }
-    return finalNum;
+    return loops;
 }
 
 console.log(Kaprekar(1234));
