@@ -14,7 +14,7 @@
 
 function Kaprekar(n) {
     let newNum = n.toString().split('');
-    newNum = n[0].concat(n[1]);
+    newNum = newNum[0] + newNum[1];
     return newNum;
 }
 
