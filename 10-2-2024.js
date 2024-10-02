@@ -25,3 +25,4 @@ function Kaprekar(n) {
 }
 
 console.log(Kaprekar(1234));
+console.log(Kaprekar(2568));
