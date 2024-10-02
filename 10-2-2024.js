@@ -13,9 +13,15 @@
 // Write a function that returns how many steps this will take for a given input N.
 
 function Kaprekar(n) {
+    let loops = 0;
     let newNum = n.toString().split('');
-    newNum = newNum[0] + newNum[1];
-    return newNum;
+    ascNum = newNum.sort((a, b) => a - b).join('');
+    desNum = newNum.sort((a, b) => b - a).join('');
+    let finalNum = Math.max(ascNum, desNum) - Math.min(ascNum, desNum);
+    if (finalNum == 6174) {
+
+    }
+    return finalNum;
 }
 
 console.log(Kaprekar(1234));
