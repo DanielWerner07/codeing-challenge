@@ -12,3 +12,10 @@
 
 // Write a function that returns how many steps this will take for a given input N.
 
+function Kaprekar(n) {
+    let newNum = n.toString().split('');
+    newNum = n[0].concat(n[1]);
+    return newNum;
+}
+
+console.log(Kaprekar(1234));
