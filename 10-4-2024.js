@@ -16,6 +16,7 @@
 function quxes(line) {
     let newLine;
     for (let i = 0; i < line.length; i++) {
+        if (line[i] == line[(i + 1)]) {break};
         
     }
 }
