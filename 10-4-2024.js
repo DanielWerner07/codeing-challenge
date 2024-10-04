@@ -12,3 +12,10 @@
 // ['B', 'R', 'B']           | (R, B) -> G
 // ['B', 'G']                | (B, G) -> R
 // ['R']                     |
+
+function quxes(line) {
+    let newLine;
+    for (let i = 0; i < line.length; i++) {
+        
+    }
+}
