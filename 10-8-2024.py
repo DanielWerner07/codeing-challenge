@@ -48,3 +48,11 @@ root.right.right = TreeNode(10)
 # Range [4, 9]
 result = range_sum_bst(root, 4, 9)
 print(result)  # Output: 23
+
+# Explanation:
+
+#     If the current node is None, return 0.
+#     Add the current node's value to the sum if it lies within the range [a, b].
+#     Traverse the left subtree if the current node's value is greater than a (there might be nodes within the range in the left subtree).
+#     Traverse the right subtree if the current node's value is less than b.
+#     Sum up the results from the current node, left subtree, and right subtree.
