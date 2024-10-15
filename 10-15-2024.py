@@ -12,3 +12,13 @@
 # and so on until we reach the end, when we return the sum of the array.
 
 # Implement your own version of reduce.
+
+def reduce(lst, func, initial):
+    result = initial
+    for item in lst:
+        result = func(result, item)
+    return result
+
+# Example usage:
+def add(a, b):
+    return a + b
