@@ -22,3 +22,18 @@ def reduce(lst, func, initial):
 # Example usage:
 def add(a, b):
     return a + b
+
+# Implementing sum using reduce
+def sum(lst):
+    return reduce(lst, add, 0)
+
+# Testing
+numbers = [1, 2, 3, 4, 5]
+print(sum(numbers))  # Output: 15
+
+# Another example: Product of all elements
+def multiply(a, b):
+    return a * b
+
+product = reduce(numbers, multiply, 1)
+print(product)  # Output: 120
