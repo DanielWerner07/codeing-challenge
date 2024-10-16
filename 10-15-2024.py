@@ -44,13 +44,9 @@ print(product)  # Output: 120
 #         lst: The list to process.
 #         func: The combining function that operates on two arguments.
 #         initial: The starting value for the reduction.
-
 #     Start with result initialized to initial.
-
 #     Iterate over the list lst:
 #         Call the combining function func with the current result and the current list element.
 #         Update result with the return value of func.
-
 #     Return the final result after processing all elements in the list.
-
 # This implementation follows the functional paradigm, where the combining function can be any operation (e.g., addition, multiplication, concatenation).
